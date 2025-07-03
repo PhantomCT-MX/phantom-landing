@@ -36,7 +36,7 @@ export const Services = () => {
         <div>
           <h2 className="text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              Servicios Enfocados en eL{" "}
+              Servicios Enfocados en el{" "}
             </span>
             Cliente
           </h2>
