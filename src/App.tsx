@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { About } from "./components/About";
 import { Cta } from "./components/Cta";
 import { FAQ } from "./components/FAQ";
@@ -14,26 +15,34 @@ import { Sponsors } from "./components/Sponsors";
 import { Team } from "./components/Team";
 import { Testimonials } from "./components/Testimonials";
 import "./App.css";
+import { NotFound } from "./components/NotFound";
 
-function App() {
+function Home() {
   return (
     <>
       <Navbar />
       <Hero />
-      {/* <Sponsors /> */}
       <About />
       <HowItWorks />
       <Features />
       <Services />
       <Cta />
-      {/* <Testimonials /> */}
       <Team />
-      {/* <Pricing /> */}
-      {/* <Newsletter /> */}
-      {/* <FAQ /> */}
       <Footer />
       <ScrollToTop />
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* Puedes añadir más rutas válidas aquí */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 
